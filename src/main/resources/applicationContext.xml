@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="spring"/>
+<!--playground
+-->
+    <bean id="playground"
+          class="spring.Playground">
+        <constructor-arg>
+            <list>
+                <ref bean="towerLevel1"/>
+                <ref bean="towerLevel2"/>
+                <ref bean="towerLevel3"/>
+                <ref bean="towerLevel1"/>
+            </list>
+        </constructor-arg>
+    </bean>
+    <!--towers
+    -->
+    <bean id = "towerLevel1"
+          class="spring.Tower">
+        <constructor-arg name="level" value ="1"/>
+        <constructor-arg ref ="archerLevel1"/>
+    </bean>
+
+    <bean id = "towerLevel2"
+          class="spring.Tower">
+    <constructor-arg name="level" value ="2"/>
+    <constructor-arg ref ="archerLevel3"/>
+    </bean>
+
+    <bean id = "towerLevel3"
+          class="spring.Tower">
+    <constructor-arg name="level" value ="3"/>
+    <constructor-arg ref ="archerLevel2"/>
+    </bean>
+
+    <bean id = "towerLevel4"
+          class="spring.Tower">
+    <constructor-arg name="level" value ="4"/>
+    <constructor-arg ref ="archerLevel4"/>
+    </bean>
+
+    <!--archers
+    -->
+    <bean id = "archerLevel1"
+          class = "spring.Archer">
+        <constructor-arg name = "level" value="1"/>
+    </bean>
+
+    <bean id = "archerLevel2"
+          class = "spring.Archer">
+        <constructor-arg name = "level" value="2"/>
+    </bean>
+
+    <bean id = "archerLevel3"
+          class = "spring.Archer">
+        <constructor-arg name = "level" value="3"/>
+    </bean>
+
+    <bean id = "archerLevel4"
+          class = "spring.Archer">
+        <constructor-arg name = "level" value="1"/>
+    </bean>
+
+</beans>
