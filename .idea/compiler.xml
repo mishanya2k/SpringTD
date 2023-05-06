@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TD" />
+        <module name="SpringTD" />
       </profile>
     </annotationProcessing>
   </component>

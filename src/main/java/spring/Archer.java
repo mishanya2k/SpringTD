@@ -5,8 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import spring.interfaces.IArcher;
 
-@Component
-@Scope("prototype")
+
 public class Archer implements IArcher {
     private int level;
 

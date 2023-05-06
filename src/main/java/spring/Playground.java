@@ -8,12 +8,12 @@ import spring.interfaces.ITower;
 import java.util.List;
 import java.util.Random;
 
-@Component
+
 public class Playground implements IPlayground {
     private List<ITower> listOfTowers;
     private int power;
 
-    @Autowired
+
     public Playground(List<ITower> listOfTowers) {
         this.listOfTowers = listOfTowers;
     }

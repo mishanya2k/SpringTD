@@ -7,14 +7,14 @@ import org.springframework.stereotype.Component;
 import spring.interfaces.IArcher;
 import spring.interfaces.ITower;
 
-@Component
-@Scope("prototype")
+
+
 public class Tower implements ITower {
 
     private int level;
     private Archer archer;
 
-    @Autowired
+
     public Tower(int level, Archer archer) {
         this.level = level;
         this.archer = archer;
